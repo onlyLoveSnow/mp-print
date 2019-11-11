@@ -1,0 +1,16 @@
+/* pages/register/register.wxss */
+
+.regBox {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.mainBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
