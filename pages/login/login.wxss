@@ -12,6 +12,7 @@
   justify-content: center;
   height: 450rpx;
   font-size: 60rpx;
+  margin-bottom: 20rpx;
 }
 
 .midBox {

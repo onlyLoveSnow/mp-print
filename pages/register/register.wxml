@@ -1,27 +1,21 @@
 <!--pages/register/register.wxml-->
 <view class="mainBox" align="center">
-  <view class="regBox">
-    <text>学号:</text>
-    <input placeholder="请输入学号" bindinput="registerNum"></input>
+  <view class="viewBox">
+    <input class="inputBlock" placeholder="请输入学号" placeholder-class="inputBox"  bindinput="registerNum"></input>
   </view>
-  <view class="regBox">
-    <text>姓名:</text>
-    <input placeholder="请输入姓名" bindinput="registerName"></input>
+  <view class="viewBox">
+    <input class="inputBlock" placeholder="请输入姓名" placeholder-class="inputBox" bindinput="registerName"></input>
   </view>
-  <view class="regBox">
-    <text>手机号:</text>
-    <input placeholder="请输入手机号" bindinput="registerPhone"></input>
+  <view class="viewBox">
+    <input class="inputBlock" placeholder="请输入手机号" placeholder-class="inputBox" bindinput="registerPhone"></input>
   </view>
-  <view class="regBox">
-    <text>密码:</text>
-    <input placeholder="请输入密码" password="true" bindinput="registerPassword"></input>
+  <view class="viewBox">
+    <input class="inputBlock" placeholder="请输入密码" placeholder-class="inputBox" password="true" bindinput="registerPassword"></input>
   </view>
-  <view class="regBox">
-    <text>确认密码:</text>
-    <input placeholder="请确认密码" password="true" bindinput="registerRePassword"></input>
+  <view class="viewBox">
+    <input class="inputBlock" placeholder="请确认密码" placeholder-class="inputBox" password="true" bindinput="registerRePassword"></input>
   </view>
-
-  <view>
-    <button type="primary" bindtap="register">注册</button>
-  </view>
+</view>
+<view style="margin-left: 200rpx; margin-right: 200rpx; margin-top: 50rpx">
+  <button type="primary" bindtap="register">注册</button>
 </view>

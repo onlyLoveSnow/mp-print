@@ -3,14 +3,34 @@
 .regBox {
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 20px;
 }
 
-.mainBox{
+.mainBox {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 100px;
+  text-align: center;
+}
+
+.inputBox {
+  height: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.inputBlock {
+  height: 25px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.viewBox {
+  margin: 10px;
+  border-bottom: 1px solid #eee;
 }

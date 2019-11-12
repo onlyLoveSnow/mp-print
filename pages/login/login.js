@@ -16,7 +16,7 @@ Page({
     console.log(this.data.password)
 
     wx.request({
-      url: 'http://127.0.0.1:8080/login',
+      url: 'http://192.168.1.100:8080/login',
       data: {
         "num": this.data.num,
         "password": this.data.password
