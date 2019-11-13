@@ -1,39 +1,43 @@
-// pages/login/login.js
+// pages/print/print.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    num: null,
-    password: null,
-  },
-  // 点击登录按钮
-  loginTap() {
-    console.log("登录按钮")
 
-    console.log(this.data.num)
-    console.log(this.data.password)
+    array: ['A4', 'A3', '16开', '明信片'],
+    index: 0,
+
+  },
+
+  bindPickerChange: function(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+
+  formSubmit: function(e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    console.log(this.data.index)
+
 
     wx.request({
-      url: 'http://127.0.0.1:8080/login',
+      url: 'http://127.0.0.1:8080/addPrint',
       data: {
-        "num": this.data.num,
-        "password": this.data.password
+        "size": this.data.array[this.data.index],
+        "printStyle": e.detail.value.option,
+        "printColor": e.detail.value.bw,
+        "notes": e.detail.value.input,
+        "number": wx.getStorageSync('user').number,
       },
       success(res) {
-        console.log(res.data)
         if (res.data.status == 'success') {
-          console.log(res.data.obj)
-          wx.setStorageSync("user", res.data.obj)
+          console.log(res.data.msg)
           wx.switchTab({
             url: '/pages/main/main',
           })
-          wx.showToast({
-            title: res.data.msg,
-            icon: 'none'
-          })
-        }else{
           wx.showToast({
             title: res.data.msg,
             icon: 'none'
@@ -42,35 +46,8 @@ Page({
       }
     })
   },
-
-  // 学号输入框点击事件
-  inputNum(res) {
-    // 给data赋值
-    this.setData({
-      num: res.detail.value
-    })
-  },
-
-  // 密码输入框点击事件
-  inputPassword(res) {
-    // 给data赋值
-    this.setData({
-      password: res.detail.value
-    })
-  },
-
-  register() {
-    console.log("注册")
-    wx.navigateTo({
-      url: '/pages/register/register',
-    })
-  },
-
-  forgetPassword() {
-    wx.showToast({
-      title: '还没有这个功能，哈哈',
-      icon:'none'
-    })
+  formReset: function() {
+    console.log('form发生了reset事件')
   },
 
   /**

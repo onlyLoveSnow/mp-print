@@ -25,7 +25,7 @@
   <!-- 注册与忘记密码 -->
   <view class="botBox">
     <view style="flex: 1" bindtap="register">注册账号</view>
-    <view>忘记密码</view>
+    <view bindtap="forgetPassword">忘记密码</view>
   </view>
 
 </view>

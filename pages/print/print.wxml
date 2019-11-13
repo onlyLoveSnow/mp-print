@@ -1,0 +1,48 @@
+<!--pages/print/print.wxml-->
+<view class="printBox">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+    <view class="section" class="printBox">
+      <view class="section__title">选择纸张大小: </view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+        </view>
+      </picker>
+    </view>
+
+
+    <view class="section section_gap" class="printBox">
+      <view class="section__title">打印选项</view>
+      <radio-group name="option">
+        <label>
+          <radio value="单面" />单面</label>
+        <label>
+          <radio value="双面" />双面</label>
+        <label>
+          <radio value="其他" />其他</label>
+      </radio-group>
+    </view>
+
+    <view class="section section_gap" class="printBox">
+      <view class="section__title">黑白彩色</view>
+      <radio-group name="bw">
+        <label>
+          <radio value="黑白" />黑白</label>
+        <label>
+          <radio value="彩色" />彩色</label>
+        <label>
+          <radio value="其他" />其他</label>
+      </radio-group>
+    </view>
+
+    <view class="section" class="printBox">
+      <textarea name="input" bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
+    </view>
+
+    <view class="btn-area">
+      <button type="primary" formType="submit" style="margin: 10px; margin-left: 50px; margin-right: 50px; ">Submit</button>
+      <button type="primary" formType="reset" style="margin: 10px; margin-left: 50px; margin-right: 50px; ">Reset</button>
+    </view>
+  </form>
+</view>

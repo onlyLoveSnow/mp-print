@@ -1,0 +1,6 @@
+/* pages/print/print.wxss */
+
+.printBox{
+  display: flex;
+  flex-direction: row;
+}

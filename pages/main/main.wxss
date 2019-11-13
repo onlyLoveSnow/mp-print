@@ -1,1 +1,5 @@
 /* pages/main/main.wxss */
+
+.btn{
+  margin: 10px;
+}

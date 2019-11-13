@@ -46,7 +46,7 @@ Page({
     console.log("注册界面button")
     if (this.data.password == this.data.rePassword) {
       wx.request({
-        url: 'http://192.168.1.100:8080/register',
+        url: 'http://127.0.0.1:8080/register',
         data: {
           "num": this.data.num,
           "name": this.data.name,
