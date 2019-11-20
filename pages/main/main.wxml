@@ -1,6 +1,7 @@
 <!--pages/main/main.wxml-->
-<view>主页</view>
-
-<button type="primary" class="btn" bindtap="print">预约打印</button>
-<button type="primary" class="btn">当前队列</button>
-<button type="primary" class="btn">我的预约</button>
+<view class="mainBox">
+  <button type="primary" class="btn" bindtap="print">预约打印</button>
+  <button type="primary" class="btn" bindtap="printQueue">当前队列</button>
+  <button type="primary" class="btn">我的预约</button>
+  <button type="primary" class="btn" bindtap="upload">上传文件</button>
+</view>

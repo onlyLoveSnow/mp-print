@@ -36,8 +36,10 @@
       </radio-group>
     </view>
 
+    <button size="mini" bindtap="getFile">选择文件</button> <span>{{file.name == "" ? '请选择文件' : file.name}}</span>
+
     <view class="section" class="printBox">
-      <textarea name="input" bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
+      <textarea name="input" bindblur="bindTextAreaBlur" auto-height placeholder="备注" />
     </view>
 
     <view class="btn-area">

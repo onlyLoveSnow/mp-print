@@ -1,0 +1,18 @@
+<!--pages/printList/printList.wxml-->
+<view wx:for="{{list}}" class="{{item.number == user.num ? 'selfClass' : 'atherClass'}}">
+  <view>
+    {{index + 1}}
+  </view>
+  <view>
+    <view class="number">
+      <text>{{item.number}}</text>
+    </view>
+    <view style="margin-left: 150rpx;">
+      <text>{{item.getModify}}</text>
+    </view>
+  </view>
+  <view>
+    <text wx:if="{{index == 0}}">打印中</text>
+    <text wx:else>排队中</text>
+  </view>
+</view>
